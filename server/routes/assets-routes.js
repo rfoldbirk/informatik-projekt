@@ -1,6 +1,9 @@
 const router = require('express').Router()
 const fs = require('fs')
 
+// funktionen finder en fil ud fra pathen
+// bliver brugt når jeg henter forskellige assets fra serveren
+// alt i mappen assets kan tilgås
 
 function find(path) {
     let splitPath = path.split('/')
@@ -16,7 +19,6 @@ function find(path) {
 
         let doesInclude = false
 
-        // console.log(children, fileName)
 
         for (kid of children) {
             let kidWT = (kid.includes('.')) ? kid.split('.')[0]:kid
@@ -28,7 +30,6 @@ function find(path) {
         }
 
         let newPath = process.env.DIRNAME + '/game' + pathWF + '/' + fileName
-        // console.log(newPath)
 
         let isFile
 
@@ -38,7 +39,6 @@ function find(path) {
             return false
         }
 
-        // console.log(isFile, doesInclude)
 
         if (isFile && doesInclude) {
             return newPath

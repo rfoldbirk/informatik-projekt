@@ -5,8 +5,11 @@
 }
 
 
+span {
+    color: #08da8d;
+}
 
-
+/* En brik */
 .mark {
     width: calc(40vw/4);
     height: calc(40vw/4);
@@ -17,6 +20,7 @@
     background-color: #555;
 }
 
+/* brikkens stil på mobil / touch devices */
 .mark-mobile {
     width: calc(70vw/4);
     height: calc(70vw/4);
@@ -27,36 +31,42 @@
     background-color: #555;
 }
 
-
+/* i tilfælde af at brikken skal være en cirkel */
 .circle {
     border-radius: 50%;
 }
 
+
+/* Farven til egne brikker */
 .me {
     background-color:#08da8d;
 }
 
+
+/* Farven til brikker der KAN fjernes */
 .remove {
     background-color:#e04747;
 }
 
-
+/* Tja, det giver vel lidt sig selv */
 .center {
     text-align: center;
 }
 
-
+/* Lidt stil til div elementet som holder på knapperne */
 .players {
     width: 100%;
     height: 100px;
     text-align: center;
 }
 
+
+/* Lidt stil til knapperne */
 .players>button {
     margin: 10px;
 }
 
-
+/* Stil til felterne på computer */
 .fields {
     border-style: solid;
     /* border-color: rgba(255, 255, 255, 0.288); */
@@ -65,6 +75,8 @@
     height: calc(40vw/3);
 }
 
+
+/* Stil til felterne på mobil / touch devices */
 .fields-mobile {
     border-style: solid;
     /* border-color: rgba(255, 255, 255, 0.288); */
@@ -74,6 +86,7 @@
 }
 
 
+/* Når musen er over felterne. Bliver kun brugt på computer versionen */
 .fields-hover {
     background-color: rgba(255, 255, 255, 0.116);
 }
